@@ -1,0 +1,71 @@
+:root{
+  --base-color:pink
+}     
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+.logo{
+  width: 100px;
+  height: 100px;
+  background: var(--base-color);
+  text-align: center;
+  line-height: 100px;
+  position: absolute;
+  left: 200px;
+  top: 100px;
+}
+.nav{
+  position: absolute;
+  left: 400px;
+  top: 200px;
+}
+.nav li{
+  list-style: none;
+  float: left;
+  margin: 10px;
+  color: var(--base-color);
+}
+.context{
+  position: absolute;
+  left: 200px;
+  top: 300px;
+  width: 300px;
+  height: 600px;
+  padding: 10px;
+  background-color: var(--base-color);
+}
+
+.select{
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+.select li{
+  margin: 20px 0;
+}
+.select li:nth-child(1){
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+}
+.select li:nth-child(2){
+  width: 50px;
+  height: 50px;
+  background-color: skyblue;
+}
+.select li:nth-child(3){
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+}
+.select li:nth-child(4){
+  width: 50px;
+  height: 50px;
+  background-color: green;
+}

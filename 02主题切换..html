@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./02主题切换.css">
+</head>
+<body>
+  <div class="logo">
+     <span>LOGO</span>
+  </div>
+  
+  <div> 
+    <ul class="nav">
+      <li>首页</li>
+      <li>记录</li>
+      <li>个人中心</li></li>
+      <li>登录</li>
+      <li>注册</li>
+    </ul>
+  </div>
+  <div class="context">
+    <span>长亭外，古道边，芳草碧连天</span>
+    <span>长亭外，古道边，芳草碧连天</span>
+    <span>长亭外，古道边，芳草碧连天</span>
+    <span>长亭外，古道边，芳草碧连天</span>
+    <span>长亭外，古道边，芳草碧连天</span>
+    <span>长亭外，古道边，芳草碧连天</span>
+  </div>
+  <ul class="select">
+    <li class="s"></li>
+    <li class="s"></li>
+    <li class="s"></li>
+    <li class="s"></li>
+  </ul>
+  <script>
+    // 获取所有样式选择按钮
+    let change = document.querySelectorAll('.s')
+    // 获取根元素样式
+    let rootStyle = document.querySelector(':root').style
+    // console.log(rootStyle);
+    change.forEach(item => {
+      item.addEventListener('click',function(){
+        let bgStyle = window.getComputedStyle(this,null)
+        let bgColor = bgStyle.getPropertyValue("background-color"); //请求的 CSS 属性的值
+        // 将属性值赋值给 --base-color;
+        rootStyle.setProperty('--base-color',bgColor)
+      })
+    })
+  </script>
+</body>
+</html>
